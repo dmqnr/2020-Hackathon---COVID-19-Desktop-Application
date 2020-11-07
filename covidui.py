@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "Active Cases:"))
         self.label_5.setText(_translate("MainWindow", "Critical Cases:"))
         self.label_6.setText(_translate("MainWindow", "Deaths:"))
-        self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">Total Cases:</span></p></body></html>"))
+        self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Total Cases:</span></p></body></html>"))
         self.label_8.setText(_translate("MainWindow", "Recovered Cases:"))
         self.exit.setText(_translate("MainWindow", "Exit"))
         
