@@ -29,3 +29,10 @@ def searchByCountry(self, MainWindow):
     self.recovered.setText(str(recovered))
     self.total.setText(str(total))
     self.deaths.setText(str(newDeaths))
+    
+    if  total >= 100000:
+        self.warning_label.setText("We do not recommend traveling here.")
+    elif total < 100000 and total >= 10000:
+        self.warning_label.setText("Travel here at your own discretion.")
+    elif total < 10000:
+        self.warning_label.setText("Be cautious traveling here.")
