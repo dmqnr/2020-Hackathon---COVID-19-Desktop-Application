@@ -82,6 +82,14 @@ class Ui_MainWindow(object):
         self.recovered.setObjectName("recovered")
         self.exit = QtWidgets.QPushButton(self.centralwidget)
         self.exit.setGeometry(QtCore.QRect(630, 30, 75, 23))
+        self.warning_label = QtWidgets.QLabel(self.centralwidget)
+        self.warning_label.setGeometry(QtCore.QRect(100, 390, 571, 41))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.warning_label.setFont(font)
+        self.warning_label.setText("")
+        self.warning_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.warning_label.setObjectName("warning_label")
         self.exit.setObjectName("exit")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -118,6 +126,13 @@ class Ui_MainWindow(object):
         self.recovered.setText(str(recovered))
         self.total.setText(str(totalCases))
         self.deaths.setText(str(newDeaths))
+        
+        if  totalCases >= 100000:
+            self.warning_label.setText("We do not recommend traveling here.")
+        elif totalCases < 100000 and totalCases >= 10000:
+            self.warning_label.setText("Travel here at your own discretion.")
+        elif totalCases < 10000:
+            self.warning_label.setText("Be cautious traveling here.")
         
 
     """def searchByCountry(self, MainWindow):
