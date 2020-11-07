@@ -6,11 +6,9 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-import json
-import requests
 from PyQt5 import QtCore, QtGui, QtWidgets
-from searchByCountryClass import *
-from getCountriesClass import *
+from searchByCountryClass import searchByCountry
+from getCountriesClass import getCountries
 
 """def getCountries():
     url = "https://covid-193.p.rapidapi.com/countries"
@@ -45,7 +43,7 @@ class Ui_MainWindow(object):
         self.search = QtWidgets.QPushButton(self.centralwidget)
         self.search.setGeometry(QtCore.QRect(490, 30, 75, 23))
         self.search.setObjectName("search")
-        self.search.clicked.connect(self.searchByCountry)
+        self.search.clicked.connect(self.searchOnClick)
         self.population = QtWidgets.QLineEdit(self.centralwidget)
         self.population.setGeometry(QtCore.QRect(170, 100, 113, 20))
         self.population.setObjectName("population")
@@ -85,14 +83,6 @@ class Ui_MainWindow(object):
         self.exit = QtWidgets.QPushButton(self.centralwidget)
         self.exit.setGeometry(QtCore.QRect(630, 30, 75, 23))
         self.exit.setObjectName("exit")
-        self.warning_label = QtWidgets.QLabel(self.centralwidget)
-        self.warning_label.setGeometry(QtCore.QRect(100, 390, 571, 41))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.warning_label.setFont(font)
-        self.warning_label.setText("")
-        self.warning_label.setAlignment(QtCore.Qt.AlignCenter)
-        self.warning_label.setObjectName("warning_label")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
@@ -118,6 +108,17 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">Total Cases:</span></p></body></html>"))
         self.label_8.setText(_translate("MainWindow", "Recovered Cases:"))
         self.exit.setText(_translate("MainWindow", "Exit"))
+        
+    def searchOnClick(self, MainWindow):
+        popul, active, newCases, critical, recovered, totalCases, newDeaths, totalDeaths = searchByCountry(str(self.countryList.currentText()))
+        self.population.setText(str(popul))
+        self.newCases.setText(str(newCases))
+        self.activeCases.setText(str(active))
+        self.criticalCases.setText(str(critical))
+        self.recovered.setText(str(recovered))
+        self.total.setText(str(totalCases))
+        self.deaths.setText(str(newDeaths))
+        
 
     """def searchByCountry(self, MainWindow):
         country = str(self.countryList.currentText())
@@ -145,8 +146,8 @@ class Ui_MainWindow(object):
         self.recovered.setText(str(recovered))
         self.total.setText(str(total))
         self.deaths.setText(str(newDeaths))"""
-        
-
+    
+    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

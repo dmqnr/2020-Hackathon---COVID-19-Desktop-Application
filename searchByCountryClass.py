@@ -3,9 +3,7 @@ import requests
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-def searchByCountry(self, MainWindow):
-    country = str(self.countryList.currentText())
-    print(country)
+def searchByCountry(country):
     querystring = {"country" : country}
     url = "https://covid-193.p.rapidapi.com/statistics"
     headers = {
@@ -16,23 +14,10 @@ def searchByCountry(self, MainWindow):
     data = response.json()
     popul = data["response"][0]["population"]
     active = data["response"][0]["cases"]["active"]
-    new = data["response"][0]["cases"]["new"]
+    newCases = data["response"][0]["cases"]["new"]
     critical = data["response"][0]["cases"]["critical"]
     recovered = data["response"][0]["cases"]["recovered"] 
-    total = data["response"][0]["cases"]["total"] 
+    totalCases = data["response"][0]["cases"]["total"] 
     newDeaths = data["response"][0]["deaths"]["new"]
     totalDeaths = data["response"][0]["deaths"]["total"]
-    self.population.setText(str(popul))
-    self.newCases.setText(str(new))
-    self.activeCases.setText(str(active))
-    self.criticalCases.setText(str(critical))
-    self.recovered.setText(str(recovered))
-    self.total.setText(str(total))
-    self.deaths.setText(str(newDeaths))
-    
-    if  total >= 100000:
-        self.warning_label.setText("We do not recommend traveling here.")
-    elif total < 100000 and total >= 10000:
-        self.warning_label.setText("Travel here at your own discretion.")
-    elif total < 10000:
-        self.warning_label.setText("Be cautious traveling here.")
+    return popul, active, newCases, critical, recovered, totalCases, newDeaths, totalDeaths
