@@ -10,16 +10,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from searchByCountryClass import searchByCountry
 from getCountriesClass import getCountries
 
-"""def getCountries():
-    url = "https://covid-193.p.rapidapi.com/countries"
-    headers = {
-        'x-rapidapi-key': "22d3a1185emsh3d18a46b7b639c5p131883jsncc7c7abd2aa6",
-        'x-rapidapi-host': "covid-193.p.rapidapi.com"
-    }
-    response = requests.request("GET", url, headers=headers)
-    country = response.json()
-    return country["response"]"""
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("Covid-19 Travel Advisory")
@@ -137,8 +127,7 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Total Cases:</span></p></body></html>"))
         self.label_8.setText(_translate("MainWindow", "Recovered Cases:"))
         self.exit.setText(_translate("MainWindow", "Exit"))
-        
-        
+         
     def initUI(self, MainWindow):
         for country in getCountries():
             self.countryList.addItem(country)
@@ -160,43 +149,3 @@ class Ui_MainWindow(object):
             self.warning_label.setText("Travel here at your own discretion.")
         elif totalCases < 10000:
             self.warning_label.setText("Be cautious traveling here.")
-
-        
-
-    """def searchByCountry(self, MainWindow):
-        country = str(self.countryList.currentText())
-        print(country)
-        querystring = {"country" : country}
-        url = "https://covid-193.p.rapidapi.com/statistics"
-        headers = {
-            'x-rapidapi-key': "22d3a1185emsh3d18a46b7b639c5p131883jsncc7c7abd2aa6",
-            'x-rapidapi-host': "covid-193.p.rapidapi.com"
-        }
-        response = requests.request("GET", url, headers=headers, params=querystring)
-        data = response.json()
-        popul = data["response"][0]["population"]
-        active = data["response"][0]["cases"]["active"]
-        new = data["response"][0]["cases"]["new"]
-        critical = data["response"][0]["cases"]["critical"]
-        recovered = data["response"][0]["cases"]["recovered"] 
-        total = data["response"][0]["cases"]["total"] 
-        newDeaths = data["response"][0]["deaths"]["new"]
-        totalDeaths = data["response"][0]["deaths"]["total"]
-        self.population.setText(str(popul))
-        self.newCases.setText(str(new))
-        self.activeCases.setText(str(active))
-        self.criticalCases.setText(str(critical))
-        self.recovered.setText(str(recovered))
-        self.total.setText(str(total))
-        self.deaths.setText(str(newDeaths))"""
-    
-    
-"""if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())"""
-
