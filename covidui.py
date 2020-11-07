@@ -12,9 +12,8 @@ from getCountriesClass import getCountries
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("Covid-19 Travel Advisory")
+        MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
-        MainWindow.setWindowTitle("COVID-19 Travel Advisory") 
 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
