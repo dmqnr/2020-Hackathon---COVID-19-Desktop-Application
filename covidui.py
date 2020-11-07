@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("Covid-19 Travel Advisory")
         MainWindow.resize(800, 600)
-        self.setWindowTitle("COVID-19 Travel Advisory") 
+        MainWindow.setWindowTitle("COVID-19 Travel Advisory") 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.countryList = QtWidgets.QComboBox(self.centralwidget)
