@@ -9,9 +9,10 @@
 import json
 import requests
 from PyQt5 import QtCore, QtGui, QtWidgets
+from searchByCountryClass import *
+from getCountriesClass import *
 
-
-def getCountries():
+"""def getCountries():
     url = "https://covid-193.p.rapidapi.com/countries"
     headers = {
         'x-rapidapi-key': "22d3a1185emsh3d18a46b7b639c5p131883jsncc7c7abd2aa6",
@@ -19,7 +20,7 @@ def getCountries():
     }
     response = requests.request("GET", url, headers=headers)
     country = response.json()
-    return country["response"]
+    return country["response"]"""
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -110,7 +111,7 @@ class Ui_MainWindow(object):
         self.label_8.setText(_translate("MainWindow", "Recovered Cases:"))
         self.exit.setText(_translate("MainWindow", "Exit"))
 
-    def searchByCountry(self, MainWindow):
+    """def searchByCountry(self, MainWindow):
         country = str(self.countryList.currentText())
         print(country)
         querystring = {"country" : country}
@@ -135,7 +136,7 @@ class Ui_MainWindow(object):
         self.criticalCases.setText(str(critical))
         self.recovered.setText(str(recovered))
         self.total.setText(str(total))
-        self.deaths.setText(str(newDeaths))
+        self.deaths.setText(str(newDeaths))"""
         
 
 if __name__ == "__main__":
