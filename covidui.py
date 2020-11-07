@@ -133,6 +133,7 @@ class Ui_MainWindow(object):
             self.warning_label.setText("Travel here at your own discretion.")
         elif totalCases < 10000:
             self.warning_label.setText("Be cautious traveling here.")
+
         
 
     """def searchByCountry(self, MainWindow):
