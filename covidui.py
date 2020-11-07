@@ -25,6 +25,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("Covid-19 Travel Advisory")
         MainWindow.resize(800, 600)
         MainWindow.setWindowTitle("COVID-19 Travel Advisory") 
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.countryList = QtWidgets.QComboBox(self.centralwidget)
@@ -32,57 +33,76 @@ class Ui_MainWindow(object):
         self.countryList.setObjectName("countryList")
         for country in getCountries():
             self.countryList.addItem(country)
+
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(90, 30, 181, 16))
         self.label.setObjectName("label")
+
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(90, 100, 81, 16))
         self.label_2.setObjectName("label_2")
+
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(340, 100, 71, 20))
         self.label_3.setObjectName("label_3")
+
         self.search = QtWidgets.QPushButton(self.centralwidget)
         self.search.setGeometry(QtCore.QRect(490, 30, 75, 23))
         self.search.setObjectName("search")
         self.search.clicked.connect(self.searchOnClick)
+
         self.population = QtWidgets.QLineEdit(self.centralwidget)
         self.population.setGeometry(QtCore.QRect(170, 100, 113, 20))
         self.population.setObjectName("population")
+
         self.newCases = QtWidgets.QLineEdit(self.centralwidget)
         self.newCases.setGeometry(QtCore.QRect(410, 100, 113, 20))
         self.newCases.setObjectName("newCases")
+
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(90, 170, 81, 16))
         self.label_4.setObjectName("label_4")
+
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(340, 170, 91, 16))
         self.label_5.setObjectName("label_5")
+
         self.activeCases = QtWidgets.QLineEdit(self.centralwidget)
         self.activeCases.setGeometry(QtCore.QRect(170, 170, 113, 20))
         self.activeCases.setObjectName("activeCases")
+
         self.criticalCases = QtWidgets.QLineEdit(self.centralwidget)
         self.criticalCases.setGeometry(QtCore.QRect(440, 170, 113, 20))
         self.criticalCases.setObjectName("criticalCases")
+
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(90, 240, 54, 12))
         self.label_6.setObjectName("label_6")
+
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
         self.label_7.setGeometry(QtCore.QRect(100, 330, 151, 16))
         self.label_7.setObjectName("label_7")
+
         self.deaths = QtWidgets.QLineEdit(self.centralwidget)
         self.deaths.setGeometry(QtCore.QRect(170, 240, 113, 20))
         self.deaths.setObjectName("deaths")
+
         self.total = QtWidgets.QLineEdit(self.centralwidget)
         self.total.setGeometry(QtCore.QRect(310, 330, 113, 20))
         self.total.setObjectName("total")
+
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
         self.label_8.setGeometry(QtCore.QRect(340, 240, 111, 16))
         self.label_8.setObjectName("label_8")
+
         self.recovered = QtWidgets.QLineEdit(self.centralwidget)
         self.recovered.setGeometry(QtCore.QRect(440, 240, 113, 20))
         self.recovered.setObjectName("recovered")
+
         self.exit = QtWidgets.QPushButton(self.centralwidget)
         self.exit.setGeometry(QtCore.QRect(630, 30, 75, 23))
+        self.exit.setObjectName("exit")
+
         self.warning_label = QtWidgets.QLabel(self.centralwidget)
         self.warning_label.setGeometry(QtCore.QRect(100, 390, 571, 41))
         font = QtGui.QFont()
@@ -91,7 +111,7 @@ class Ui_MainWindow(object):
         self.warning_label.setText("")
         self.warning_label.setAlignment(QtCore.Qt.AlignCenter)
         self.warning_label.setObjectName("warning_label")
-        self.exit.setObjectName("exit")
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
