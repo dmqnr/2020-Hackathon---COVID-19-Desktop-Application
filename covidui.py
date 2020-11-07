@@ -116,7 +116,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Covid-19 Travel Advisory"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "COVID-19 Travel Advisory"))
         self.label.setText(_translate("MainWindow", "Please select a country:"))
         self.label_2.setText(_translate("MainWindow", "Population:"))
         self.label_3.setText(_translate("MainWindow", "New Cases:"))
