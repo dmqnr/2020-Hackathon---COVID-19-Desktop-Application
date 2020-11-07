@@ -117,6 +117,12 @@ class Ui_MainWindow(object):
         self.label_8.setText(_translate("MainWindow", "Recovered Cases:"))
         self.exit.setText(_translate("MainWindow", "Exit"))
         
+        
+    def initUI(self, MainWindow):
+        for country in getCountries():
+            self.countryList.addItem(country)
+        self.search.clicked.connect(self.searchOnClick)
+        
     def searchOnClick(self, MainWindow):
         popul, active, newCases, critical, recovered, totalCases, newDeaths, totalDeaths = searchByCountry(str(self.countryList.currentText()))
         self.population.setText(str(popul))
