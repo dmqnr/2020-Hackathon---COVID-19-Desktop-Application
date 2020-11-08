@@ -147,12 +147,12 @@
      <rect>
       <x>90</x>
       <y>240</y>
-      <width>54</width>
-      <height>12</height>
+      <width>71</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Deaths:</string>
+     <string>New Deaths:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
@@ -168,7 +168,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Total Cases:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="deaths">
+   <widget class="QLineEdit" name="newDeaths">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -191,8 +191,8 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>240</y>
+      <x>600</x>
+      <y>100</y>
       <width>111</width>
       <height>16</height>
      </rect>
@@ -204,8 +204,8 @@
    <widget class="QLineEdit" name="recovered">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>240</y>
+      <x>700</x>
+      <y>100</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -245,10 +245,10 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="mapImage">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>420</x>
       <y>400</y>
       <width>400</width>
       <height>400</height>
@@ -256,6 +256,52 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>240</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Total Deaths:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="totalDeaths">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>240</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>170</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Total Tests:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="totalTests">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>170</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
     </property>
    </widget>
   </widget>
