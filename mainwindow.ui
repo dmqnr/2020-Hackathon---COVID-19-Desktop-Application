@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1009</width>
-    <height>1074</height>
+    <width>965</width>
+    <height>1179</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -227,8 +227,8 @@
    <widget class="QLabel" name="warning_label">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>580</y>
+      <x>190</x>
+      <y>590</y>
       <width>571</width>
       <height>41</height>
      </rect>
@@ -248,8 +248,8 @@
    <widget class="QLabel" name="mapImage">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>590</y>
+      <x>270</x>
+      <y>680</y>
       <width>400</width>
       <height>400</height>
      </rect>
@@ -329,7 +329,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1009</width>
+     <width>965</width>
      <height>21</height>
     </rect>
    </property>
