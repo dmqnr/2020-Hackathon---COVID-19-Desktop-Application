@@ -149,24 +149,24 @@ class Ui_MainWindow(object):
         self.label_8.resize(qp.width(), qp.height())
                    
         if popul > 300000:
-            if  newCases >= 500:
+            if  int(newCases) >= 500:
                 self.warning_label.setText("The CDC considers this country a Level 3 High Risk\nMake sure to to consult all local and state regulations before traveling")
                 self.warning_label.setStyleSheet("background-color: red")
-            elif newCases < 500 and newCases > 250:
+            elif int(newCases) < 500 and newCases > 250:
                 self.warning_label.setText("The CDC considers this country a Level 2 Moderate Risk\nMake sure to to consult all local and state regulations before traveling")
                 self.warning_label.setStyleSheet("background-color: orange")
-            elif newCases <= 250:
+            elif int(newCases) <= 250:
                 self.warning_label.setText("The CDC considers this country a Level 1 Low Risk\nMake sure to to consult all local and state regulations before traveling")
                 self.warning_label.setStyleSheet("background-color: lightgreen")
 
         if popul < 300000:
-            if newCases > 10:
+            if  int(newCases) > 10:
                  self.warning_label.setText("The CDC considers this country a Level 3 High Risk\nMake sure to to consult all local and state regulations before traveling")
                  self.warning_label.setStyleSheet("background-color: red")
-            elif newCases <= 10 and newCases >= 7:
+            elif int(newCases) <= 10 and newCases >= 7:
                  self.warning_label.setText("The CDC considers this country a Level 2 Moderate Risk\nMake sure to to consult all local and state regulations before traveling")
                  self.warning_label.setStyleSheet("background-color: orange")
-            elif newCases <= 6:
+            elif int(newCases) <= 6:
                  self.warning_label.setText("The CDC considers this country a Level 1 Low Risk\nMake sure to to consult all local and state regulations before traveling")
                  self.warning_label.setStyleSheet("background-color: lightgreen")
 
