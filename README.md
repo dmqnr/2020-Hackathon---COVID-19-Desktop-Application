@@ -1,6 +1,8 @@
 # COVID-19_Desktop_Application
 Team: CyberKids
 
+Project Name: COVID-19 Travel Advisory
+
 
 How to run the program: 
    - Open and execute the main.py script.
