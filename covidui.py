@@ -170,7 +170,7 @@ class Ui_MainWindow(object):
 
     def initUI(self, MainWindow):
         for country in getCountries():
-            while country != "CAR":
+            if country != "CAR" or country != "Cura&ccedil;ao" or country != "Diamond-Princess-":
                 self.countryList.addItem(country)
         self.search.clicked.connect(self.searchOnClick)
         self.exit.clicked.connect(self.exitOnClick)
