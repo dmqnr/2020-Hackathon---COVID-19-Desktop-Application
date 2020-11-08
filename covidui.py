@@ -152,7 +152,7 @@ class Ui_MainWindow(object):
             if  int(newCases) >= 500:
                 self.warning_label.setText("The CDC considers this country a Level 3 High Risk\nMake sure to to consult all local and state regulations before traveling")
                 self.warning_label.setStyleSheet("background-color: red")
-            elif int(newCases) < 500 and newCases > 250:
+            elif int(newCases) < 500 and int(newCases) > 250:
                 self.warning_label.setText("The CDC considers this country a Level 2 Moderate Risk\nMake sure to to consult all local and state regulations before traveling")
                 self.warning_label.setStyleSheet("background-color: orange")
             elif int(newCases) <= 250:
@@ -163,7 +163,7 @@ class Ui_MainWindow(object):
             if  int(newCases) > 10:
                  self.warning_label.setText("The CDC considers this country a Level 3 High Risk\nMake sure to to consult all local and state regulations before traveling")
                  self.warning_label.setStyleSheet("background-color: red")
-            elif int(newCases) <= 10 and newCases >= 7:
+            elif int(newCases) <= 10 and int(newCases) >= 7:
                  self.warning_label.setText("The CDC considers this country a Level 2 Moderate Risk\nMake sure to to consult all local and state regulations before traveling")
                  self.warning_label.setStyleSheet("background-color: orange")
             elif int(newCases) <= 6:
