@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 def checkNone(data):
     if data is None:
-        data = "0"
+        return "0"
 
 def searchByCountry(country):
     querystring = {"country" : country}
@@ -17,31 +17,31 @@ def searchByCountry(country):
     data = response.json()
     
     popul = data["response"][0]["population"]
-    checkNone(popul)
+    popul = checkNone(popul)
     
     active = data["response"][0]["cases"]["active"]
-    checkNone(active)
+    active = checkNone(active)
     
     newCases = data["response"][0]["cases"]["new"]
-    checkNone(newCases)
+    newCases = checkNone(newCases)
     
     critical = data["response"][0]["cases"]["critical"]
-    checkNone(critical)
+    critical = checkNone(critical)
     
     recovered = data["response"][0]["cases"]["recovered"] 
-    checkNone(recovered)
+    recovered = checkNone(recovered)
     
     totalCases = data["response"][0]["cases"]["total"] 
-    checkNone(totalCases)
+    totalCases = checkNone(totalCases)
     
     newDeaths = data["response"][0]["deaths"]["new"]
-    checkNone(newDeaths)
+    newDeaths = checkNone(newDeaths)
     
     totalDeaths = data["response"][0]["deaths"]["total"]
-    checkNone(totalDeaths)
+    totalDeaths = checkNone(totalDeaths)
     
     totalTests = data["response"][0]["tests"]["total"]
-    checkNone(totalTests)
+    totalTests = checkNone(totalTests)
     
     date = data["response"][0]["day"]
 
