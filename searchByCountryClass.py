@@ -4,7 +4,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 def checkNone(data):
     if data is None:
-        return "0"
+        data = "0"
+    return data
 
 def searchByCountry(country):
     querystring = {"country" : country}
@@ -44,5 +45,6 @@ def searchByCountry(country):
     totalTests = checkNone(totalTests)
     
     date = data["response"][0]["day"]
+    date = checkNone(date)
 
     return popul, active, newCases, critical, recovered, totalCases, newDeaths, totalDeaths, totalTests, date
