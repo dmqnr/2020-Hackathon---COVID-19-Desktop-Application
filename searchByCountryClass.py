@@ -11,7 +11,6 @@ def searchByCountry(country):
         'x-rapidapi-host': "covid-193.p.rapidapi.com"
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
-    print(response.text)
     data = response.json()
     popul = data["response"][0]["population"]
     active = data["response"][0]["cases"]["active"]
