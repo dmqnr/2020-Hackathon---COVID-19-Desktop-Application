@@ -6,6 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from searchByCountryClass import searchByCountry
 from getCountriesClass import getCountries
@@ -131,6 +132,7 @@ class Ui_MainWindow(object):
         for country in getCountries():
             self.countryList.addItem(country)
         self.search.clicked.connect(self.searchOnClick)
+        self.exit.clicked.connect(self.exitOnClick)
         
     def searchOnClick(self, MainWindow):
         popul, active, newCases, critical, recovered, totalCases, newDeaths, totalDeaths = searchByCountry(str(self.countryList.currentText()))
@@ -148,3 +150,7 @@ class Ui_MainWindow(object):
             self.warning_label.setText("Travel here at your own discretion.")
         elif totalCases < 10000:
             self.warning_label.setText("Be cautious traveling here.")
+
+
+    def exitOnClick(self, MainWindow):
+        sys.exit()

@@ -3,7 +3,10 @@ from covidui import Ui_MainWindow
 
 if __name__ == "__main__":
     import sys
-    app = QtWidgets.QApplication(sys.argv)
+    app = QtCore.QCoreApplication.instance()
+    if app is None:
+        app = QtWidgets.QApplication(sys.argv)
+
     MainWindow = QtWidgets.QMainWindow()
     app.setStyle('Fusion')
     palette = QtGui.QPalette()
