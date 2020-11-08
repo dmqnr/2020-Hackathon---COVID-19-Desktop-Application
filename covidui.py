@@ -169,7 +169,7 @@ class Ui_MainWindow(object):
 
 
     def initUI(self, MainWindow):
-        illegalList = ["CAR", "Cura&ccedil;ao", "Diamond-Princess-", "Diamond-Princess", "MS-Zaandam-", "MS-Zaandam", "R&eacute;union"]
+        illegalList = ["CAR", "Cura&ccedil;ao", "Diamond-Princess-", "Diamond-Princess", "MS-Zaandam-", "MS-Zaandam", "R&eacute;union", "Brunei"]
         for country in getCountries():
             if country in illegalList:
                 continue
