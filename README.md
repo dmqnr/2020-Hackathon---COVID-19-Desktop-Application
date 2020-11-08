@@ -1,5 +1,5 @@
 # COVID-19_Desktop_Application
-Repository for our COVID-19 Desktop Application
+Team: CyberKids
 
 
 How to run the program: 
@@ -9,8 +9,10 @@ How to run the program:
 Developing tools:
    - Python3
    - PyQt5
+   - PyQt5-tools
    - GoogleMap
    - json
+   - response
 
 
 References:
