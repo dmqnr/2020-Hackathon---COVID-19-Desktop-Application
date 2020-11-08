@@ -10,6 +10,7 @@ import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from searchByCountryClass import searchByCountry
 from getCountriesClass import getCountries
+from google_maps_test import displayMap
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -143,6 +144,10 @@ class Ui_MainWindow(object):
         self.recovered.setText(str(recovered))
         self.total.setText(str(totalCases))
         self.deaths.setText(str(newDeaths))
+        qp = displayMap(str(self.countryList.currentText()))
+        self.label_8.setPixmap(qp)
+        self.label_8.resize(qp.width(), qp.height())
+        self.show()
         
         if  totalCases >= 100000:
             self.warning_label.setText("We do not recommend traveling here.")

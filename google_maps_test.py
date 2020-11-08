@@ -1,15 +1,17 @@
-from PIL import Image
-from io import BytesIO
+from PyQt5.QtWidgets import QLabel, QMainWindow, QApplication, QWidget, QVBoxLayout
+from PyQt5.QtGui import QPixmap
+import sys
 import requests
-import googlemaps 
 
-api_key = 'AIzaSyCypcr5ZZ3MenFKCpH0UJPW3QldpoGO9ys'
-url = "https://maps.googleapis.com/maps/api/staticmap?"
-center = "China"
-zoom = 10
+def displayMap(center):
+    api_key = 'AIzaSyCypcr5ZZ3MenFKCpH0UJPW3QldpoGO9ys'
+    url = "https://maps.googleapis.com/maps/api/staticmap?"
+    zoom = 10
+    r = requests.get(url + "center=" + center + "&zoom =14&size=400x400&key=" + api_key)
+    image = r.content
 
-r = requests.get(url + "center=" + center + "&zoom =14&size=400x400&key=" + api_key)
+    qp = QPixmap()
+    qp.loadFromData(image)
+    return qp
 
-im = Image.open(BytesIO(r.content))
-im.show()
-        
+
