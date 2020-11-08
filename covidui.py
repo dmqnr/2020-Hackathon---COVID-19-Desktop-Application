@@ -147,16 +147,30 @@ class Ui_MainWindow(object):
         qp = displayMap(str(self.countryList.currentText()))
         self.label_8.setPixmap(qp)
         self.label_8.resize(qp.width(), qp.height())
-        
-        if  totalCases >= 100000:
-            self.warning_label.setText("We do not recommend traveling here.")
-            self.warning_label.setStyleSheet("background-color: red")
-        elif totalCases < 100000 and totalCases >= 10000:
-            self.warning_label.setText("Travel here at your own discretion.")
-            self.warning_label.setStyleSheet("background-color: orange")
-        elif totalCases < 10000:
-            self.warning_label.setText("Be cautious traveling here.")
-            self.warning_label.setStyleSheet("background-color: lightgreen")
+                   
+        if popul > 300000:
+            if  newCases >= 500:
+                self.warning_label.setText("The CDC considers this country a Level 3 High Risk\nMake sure to to consult all local and state regulations before traveling")
+                self.warning_label.setStyleSheet("background-color: red")
+            elif newCases < 500 and totalCases > 250:
+                self.warning_label.setText("The CDC considers this country a Level 2 Moderate Risk\nMake sure to to consult all local and state regulations before traveling")
+                self.warning_label.setStyleSheet("background-color: orange")
+            elif newCases <= 250:
+                self.warning_label.setText("The CDC considers this country a Level 1 Low Risk\nMake sure to to consult all local and state regulations before traveling")
+                self.warning_label.setStyleSheet("background-color: lightgreen")
+
+        if popul < 300000:
+            if newCases > 10:
+                 self.warning_label.setText("The CDC considers this country a Level 3 High Risk\nMake sure to to consult all local and state regulations before traveling")
+                 self.warning_label.setStyleSheet("background-color: red")
+            elif newCases <= 10 and newCases >= 7:
+                 self.warning_label.setText("The CDC considers this country a Level 2 Moderate Risk\nMake sure to to consult all local and state regulations before traveling")
+                 self.warning_label.setStyleSheet("background-color: orange")
+            elif newCases <= 6 and newCases >= 0:
+                 self.warning_label.setText("The CDC considers this country a Level 1 Low Risk\nMake sure to to consult all local and state regulations before traveling")
+                 self.warning_label.setStyleSheet("background-color: lightgreen")
+
+                
 
 
     def exitOnClick(self, MainWindow):
