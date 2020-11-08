@@ -195,7 +195,10 @@ class Ui_MainWindow(object):
         self.mapImage.setPixmap(qp)
         self.mapImage.resize(qp.width(), qp.height())
         
-        if popul > 300000:
+        if newCases == "None":
+            newCases = "0"
+        
+        if popul >= 300000:
             if  int(newCases) >= 500:
                 self.warning_label.setText("The CDC considers this country a Level 3 High Risk\nMake sure to consult all local and state regulations before traveling")
                 self.warning_label.setStyleSheet("background-color: red")
