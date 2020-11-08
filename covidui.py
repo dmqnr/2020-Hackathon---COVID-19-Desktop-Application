@@ -169,8 +169,11 @@ class Ui_MainWindow(object):
 
 
     def initUI(self, MainWindow):
+        illegalList = ["CAR", "Cura&ccedil;ao", "Diamond-Princess-", "Diamond-Princess", "MS-Zaandam-", "MS-Zaandam", "R&eacute;union"]
         for country in getCountries():
-            if country != "CAR" or country != "Cura&ccedil;ao" or country != "Diamond-Princess-":
+            if country in illegalList:
+                continue
+            else:
                 self.countryList.addItem(country)
         self.search.clicked.connect(self.searchOnClick)
         self.exit.clicked.connect(self.exitOnClick)
