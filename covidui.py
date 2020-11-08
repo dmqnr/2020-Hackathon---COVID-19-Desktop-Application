@@ -150,10 +150,13 @@ class Ui_MainWindow(object):
         
         if  totalCases >= 100000:
             self.warning_label.setText("We do not recommend traveling here.")
+            self.warning_label.setStyleSheet("background-color: red")
         elif totalCases < 100000 and totalCases >= 10000:
             self.warning_label.setText("Travel here at your own discretion.")
+            self.warning_label.setStyleSheet("background-color: yellow")
         elif totalCases < 10000:
             self.warning_label.setText("Be cautious traveling here.")
+            self.warning_label.setStyleSheet("background-color: lightgreen")
 
 
     def exitOnClick(self, MainWindow):
