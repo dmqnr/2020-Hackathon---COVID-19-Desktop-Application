@@ -125,7 +125,7 @@ class Ui_MainWindow(object):
         self.logo_label = QtWidgets.QLabel(self.centralwidget)
         self.logo_label.setGeometry(QtCore.QRect(420, 20, 171, 171))
         self.logo_label.setText("")
-        self.logo_label.setPixmap(QtGui.QPixmap("logo.jpg"))
+        self.logo_label.setPixmap(QtGui.QPixmap("logo.png"))
         self.logo_label.setScaledContents(True)
         self.logo_label.setObjectName("logo_label")
         
