@@ -147,7 +147,6 @@ class Ui_MainWindow(object):
         qp = displayMap(str(self.countryList.currentText()))
         self.label_8.setPixmap(qp)
         self.label_8.resize(qp.width(), qp.height())
-        self.show()
         
         if  totalCases >= 100000:
             self.warning_label.setText("We do not recommend traveling here.")
