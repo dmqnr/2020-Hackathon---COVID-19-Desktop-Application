@@ -195,7 +195,7 @@ class Ui_MainWindow(object):
         self.mapImage.setPixmap(qp)
         self.mapImage.resize(qp.width(), qp.height())
         
-        if newCases == "None":
+        if newCases is None:
             newCases = "0"
         
         if popul >= 300000:
