@@ -4,7 +4,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 def checkNone(data):
     if data is None:
-        return "0"
+        data = "0"
+    return data
 
 def searchByCountry(country):
     querystring = {"country" : country}
