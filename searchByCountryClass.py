@@ -44,5 +44,6 @@ def searchByCountry(country):
     totalTests = checkNone(totalTests)
     
     date = data["response"][0]["day"]
+    date = checkNone(date)
 
     return popul, active, newCases, critical, recovered, totalCases, newDeaths, totalDeaths, totalTests, date
