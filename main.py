@@ -1,5 +1,3 @@
-import json
-import requests
 from PyQt5 import QtCore, QtGui, QtWidgets
 from covidui import Ui_MainWindow
 
