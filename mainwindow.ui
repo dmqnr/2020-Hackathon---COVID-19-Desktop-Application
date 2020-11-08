@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>990</width>
-    <height>900</height>
+    <width>1009</width>
+    <height>1074</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QComboBox" name="countryList">
     <property name="geometry">
      <rect>
-      <x>258</x>
-      <y>30</y>
+      <x>288</x>
+      <y>220</y>
       <width>131</width>
       <height>22</height>
      </rect>
@@ -27,8 +27,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>30</y>
+      <x>120</x>
+      <y>220</y>
       <width>181</width>
       <height>16</height>
      </rect>
@@ -40,8 +40,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>100</y>
+      <x>120</x>
+      <y>290</y>
       <width>81</width>
       <height>16</height>
      </rect>
@@ -53,8 +53,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>100</y>
+      <x>370</x>
+      <y>290</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -66,8 +66,8 @@
    <widget class="QPushButton" name="search">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>30</y>
+      <x>520</x>
+      <y>220</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -79,8 +79,8 @@
    <widget class="QLineEdit" name="population">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>100</y>
+      <x>200</x>
+      <y>290</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -89,8 +89,8 @@
    <widget class="QLineEdit" name="newCases">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>100</y>
+      <x>470</x>
+      <y>290</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -99,8 +99,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>170</y>
+      <x>120</x>
+      <y>360</y>
       <width>81</width>
       <height>16</height>
      </rect>
@@ -112,8 +112,8 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>170</y>
+      <x>370</x>
+      <y>360</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -125,8 +125,8 @@
    <widget class="QLineEdit" name="activeCases">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>170</y>
+      <x>200</x>
+      <y>360</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -135,8 +135,8 @@
    <widget class="QLineEdit" name="criticalCases">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>170</y>
+      <x>470</x>
+      <y>360</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -145,8 +145,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>240</y>
+      <x>120</x>
+      <y>430</y>
       <width>71</width>
       <height>16</height>
      </rect>
@@ -158,8 +158,8 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>330</y>
+      <x>130</x>
+      <y>520</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -171,8 +171,8 @@
    <widget class="QLineEdit" name="newDeaths">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>240</y>
+      <x>200</x>
+      <y>430</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -181,8 +181,8 @@
    <widget class="QLineEdit" name="total">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>330</y>
+      <x>340</x>
+      <y>520</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -191,8 +191,8 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>100</y>
+      <x>630</x>
+      <y>290</y>
       <width>111</width>
       <height>16</height>
      </rect>
@@ -204,8 +204,8 @@
    <widget class="QLineEdit" name="recovered">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>100</y>
+      <x>730</x>
+      <y>290</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -214,8 +214,8 @@
    <widget class="QPushButton" name="exit">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>30</y>
+      <x>660</x>
+      <y>220</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -227,8 +227,8 @@
    <widget class="QLabel" name="warning_label">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>390</y>
+      <x>130</x>
+      <y>580</y>
       <width>571</width>
       <height>41</height>
      </rect>
@@ -248,8 +248,8 @@
    <widget class="QLabel" name="mapImage">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>400</y>
+      <x>450</x>
+      <y>590</y>
       <width>400</width>
       <height>400</height>
      </rect>
@@ -261,8 +261,8 @@
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>240</y>
+      <x>370</x>
+      <y>430</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -274,8 +274,8 @@
    <widget class="QLineEdit" name="totalDeaths">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>240</y>
+      <x>470</x>
+      <y>430</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -284,8 +284,8 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>170</y>
+      <x>630</x>
+      <y>360</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -297,11 +297,30 @@
    <widget class="QLineEdit" name="totalTests">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>170</y>
+      <x>730</x>
+      <y>360</y>
       <width>113</width>
       <height>20</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logo_label">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>20</y>
+      <width>171</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>logo.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -310,7 +329,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>990</width>
+     <width>1009</width>
      <height>21</height>
     </rect>
    </property>
